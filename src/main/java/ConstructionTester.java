@@ -8,10 +8,11 @@ public class ConstructionTester
         double taxRate; 
         int numBoards;
         int numWindows;
+        double lumberCost = 8;
+        double windowCost = 11;
 
         Scanner scanner = new Scanner(System.in);
-        Construction myConstruction = new Construction(8.0,11.0,taxRate);
-
+        
         //prompt user and initialize vars
         System.out.println("Enter the sales tax rate: ");
         taxRate = scanner.nextDouble();
@@ -22,11 +23,14 @@ public class ConstructionTester
         System.out.println("How many windows do you need?");
         numWindows = scanner.nextInt();
 
+        //build new construction
+        Construction builder = new Construction(lumberCost, windowCost, taxRate);
+        
         //finding the total
-        double total = (numBoards * 8) + (numWindows * 11); 
-        System.out.println("Total: "+total);
+        double total = builder.lumberCost(numBoards) + builder.windowCost(numWindows); 
+        System.out.println("Total: "+ total);
 
         //finding the grandTotal
-        System.out.print("Grand Total: ");
+        System.out.print("Grand Total: " + builder.grandTotal(total));
     }
 }
