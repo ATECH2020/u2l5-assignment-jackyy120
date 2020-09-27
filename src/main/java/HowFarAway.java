@@ -10,8 +10,10 @@ public class HowFarAway
       double startLong;
       double endLat;
       double endLong;
+      double distanceFrom;
 
       Scanner scanner = new Scanner(System.in);
+
       //initialize vars
       System.out.print("Enter the latitude of the starting location: ");
       startLat = scanner.nextDouble();
@@ -25,8 +27,12 @@ public class HowFarAway
       System.out.print("Enter the longitude of the ending location: ");
       endLong = scanner.nextDouble();
 
+      //two geoLocation objects
+      GeoLocation geo = new GeoLocation(startLat, startLong);
+      GeoLocation other = new GeoLocation(endLat, endLong);
+
       //distance between two locations
-      SYstem.out.print("The distance is "+  +" miles.");
+      System.out.print("The distance is "+ geo.distanceFrom(other) +" miles.");
       
     }
 }
