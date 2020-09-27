@@ -13,20 +13,20 @@ public class HowFarAway
 
       Scanner scanner = new Scanner(System.in);
       //initialize vars
-      System.out.println("Enter the latitue of the starting location: ");
+      System.out.print("Enter the latitude of the starting location: ");
       startLat = scanner.nextDouble();
 
-      System.out.println("Enter the longitude of the startinig location: ");
-      startLong = Scanner.nextDouble();
+      System.out.print("Enter the longitude of the starting location: ");
+      startLong = scanner.nextDouble();
 
-      System.out.println("Enter the latitude of the ending location: ");
+      System.out.print("Enter the latitude of the ending location: ");
       endLat = scanner.nextDouble();
 
-      System.out.println("Enter the longitidue of the ending location: ");
+      System.out.print("Enter the longitude of the ending location: ");
       endLong = scanner.nextDouble();
 
-
-
+      //distance between two locations
+      SYstem.out.print("The distance is "+  +" miles.");
       
     }
 }
